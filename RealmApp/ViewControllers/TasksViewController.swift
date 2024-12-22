@@ -99,7 +99,7 @@ extension TasksViewController {
             let currentTaskIndex = IndexPath(row: currentTasks.index(of: task) ?? 0, section: 0)
             let completedTaskIndex = IndexPath(row: completedTasks.index(of: task) ?? 0, section: 1)
             let toIndexPath = isCurrentTasks ? completedTaskIndex : currentTaskIndex
-
+            
             tableView.moveRow(at: indexPath, to: toIndexPath)
             isDone(true)
         }

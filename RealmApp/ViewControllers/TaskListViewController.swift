@@ -89,6 +89,8 @@ extension TaskListViewController {
         editAction.backgroundColor = .systemOrange
         doneAction.backgroundColor = .systemGreen
         
+        // Тут скорее всего лучше если задач нет или все выполнены -
+        // вернуть UISwipeActionsConfiguration(actions: [editAction, deleteAction]) без doneAction
         return UISwipeActionsConfiguration(actions: [doneAction, editAction, deleteAction])
     }
 }
